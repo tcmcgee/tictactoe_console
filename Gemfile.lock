@@ -1,0 +1,15 @@
+GIT
+  remote: https://github.com/tcmcgee/TicTacToeRuby.git
+  revision: b4b94d9c61b1a8467bf3955ca115cacec5b06289
+  branch: newgrid
+  specs:
+    tic_tac_toe (0.1.0)
+
+GEM
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  tic_tac_toe!

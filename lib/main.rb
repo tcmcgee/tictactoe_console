@@ -1,3 +1,5 @@
+require 'tic_tac_toe'
+
 ui = Console_ui.new
 size = ui.get_board_size
 if size != 16

@@ -1,4 +1,4 @@
-class Console_ui
+class ConsoleUi
 
 	input = $stdin
 	output = $stdout

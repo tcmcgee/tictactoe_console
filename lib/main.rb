@@ -1,4 +1,6 @@
+require 'bundler/setup'
 require 'tic_tac_toe'
+require "ConsoleUi"
 
 ui = Console_ui.new
 size = ui.get_board_size

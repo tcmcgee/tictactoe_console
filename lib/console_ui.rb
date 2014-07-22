@@ -1,7 +1,7 @@
 class ConsoleUi
 
 	input = $stdin
-	output = $stdout
+	@output = $stdout
 
 	def get_board_size
 		print "Please pick your board size!!\n"
@@ -99,7 +99,7 @@ class ConsoleUi
 	end
 
 	def print_thinking_message
-		print "Thinking... Please wait!"
+		@output.puts "Thinking... Please wait!"
 	end
 
 	def get_difficulty

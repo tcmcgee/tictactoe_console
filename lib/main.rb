@@ -1,6 +1,7 @@
 require 'bundler/setup'
-require 'tic_tac_toe'
-require "ConsoleUi"
+require "rubygems"
+require 'tic_tac_toe/tic_tac_toe'
+require "console_ui"
 
 ui = Console_ui.new
 size = ui.get_board_size

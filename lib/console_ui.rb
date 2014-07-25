@@ -1,3 +1,4 @@
+
 class ConsoleUi
 
 	input = $stdin
@@ -71,7 +72,7 @@ class ConsoleUi
 			print_board(ttt)
 			print "\nWhere would you like to move?\n"
 			move = gets.chomp.to_i
-			if ttt.board[move - 1] == nil && move < size + 1 && move > 0
+			if ttt.tiles[move - 1] == nil && move < size + 1 && move > 0
 				valid = true
 				ttt.move(move,true)
 			elsif move == 0
@@ -90,8 +91,8 @@ class ConsoleUi
 		(0...size).each do |i|
 			example_board[i] = i + 1
 		end
-		ttt = TicTacToe.new(size)
-		ttt.set_board example_board
+		ttt = TicTacToe::Board.new(size)
+		ttt.set_tiles example_board
 		return_string = return_string + display_board(ttt) + "\n" + "\n Press Enter to continue.."
 		print return_string
 		enter_to_continue
@@ -125,8 +126,8 @@ class ConsoleUi
 		(0...size).each do |i|
 			example_board[i] = i + 1
 		end
-		ttt = TicTacToe.new(example_board.length)
-		ttt.set_board example_board
+		ttt = TicTacToe::Board.new(example_board.length)
+		ttt.set_tiles example_board
 		return_string = "Please reference the board as follows.\n"
 		return_string = return_string + display_board(ttt) + "\n" + "\n Press Enter to continue.."
 		print(return_string)
@@ -155,7 +156,7 @@ class ConsoleUi
 		string_board = Array.new
 		counter = 0
 		index = 0
-		tictactoe.board.each{|tile|
+		tictactoe.tiles.each{|tile|
 			index = index + 1
 			if (tile == nil)
 				if size == 16

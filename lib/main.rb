@@ -1,21 +1,21 @@
 require 'bundler/setup'
 require "rubygems"
-require 'tic_tac_toe/tic_tac_toe'
-require "console_ui"
+require 'tic_tac_toe'
+require_relative "console_ui"
 
-ui = Console_ui.new
+ui = ConsoleUi.new
 size = ui.get_board_size
 if size != 16
 difficulty = ui.get_difficulty
 if difficulty == 1
-	computer = Computer.new
+	computer = TicTacToe::Computer.new
 else
-	computer = Recursive_computer.new
+	computer = TicTacToe::Recursive_computer.new
 end
 else
-	computer = Computer.new
+	computer = TicTacToe::Computer.new
 end
 
-game = Game.new(TicTacToe.new(size),computer,ui)
+game = TicTacToe::Game.new(TicTacToe::Board.new(size),computer,ui)
 
 game.start

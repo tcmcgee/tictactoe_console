@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tcmcgee/TicTacToeRuby
-  revision: c01c62b33f0d426cb9e5412c00ae05edd8a9f722
+  revision: cc161993e2841761858963908ba8b0a06c42bd42
   branch: newgrid
   specs:
     tic_tac_toe (0.1.0)

@@ -74,7 +74,7 @@ class ConsoleUi
 			move = gets.chomp.to_i
 			if ttt.tiles[move - 1] == nil && move < size + 1 && move > 0
 				valid = true
-				ttt.move(move,true)
+				return move
 			elsif move == 0
 				print_help
 				enter_to_continue
